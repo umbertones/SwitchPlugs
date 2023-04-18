@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<HEAD>
+<TITLE>Switchboard</TITLE>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet' href='sh.css'>
+<script	type='text/javascript' src="sh.js"></script>
+
+
+</HEAD>
+
+<BODY onload="sh_init()">
+
+<h2>Switchboard:</h2>
+<h3>3D-Drucker:</h3>
+<div class="row">
+<div class="col-1">
+<label class="switch">
+  <input type="checkbox" id="Sh1" onclick="sw_sh1('1')"> 
+  <span class="slider round"></span>
+</label>
+</div>
+<div class="col-2" id="stat1"> </div>
+<div class="col-4" id="temp1"> </div>
+</div>
+
+<h3>Media-Pi</h3>
+<div class="row">
+<div class="col-1">
+<label class="switch">
+  <input type="checkbox" id="Sh3" onclick="sw_sh1('3')"> 
+  <span class="slider round"></span>
+</label>
+</div>
+<div class="col-2" id="stat3"> </div>
+<div class="col-4" id="temp3"> </div>
+</div>
+
+
+<h3>Teststeckdose:</h3>
+<div class="row">
+<div class="col-1">
+<label class="switch">
+  <input type="checkbox" id="Sh2" onclick="sw_sh1('2')"> 
+  <span class="slider round"></span>
+</label>
+</div>
+<div class="col-2" id="stat2"> </div>
+<div class="col-4" id="temp2"> </div>
+</div>
+
+
+</BODY>
+</HTML>
