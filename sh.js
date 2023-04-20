@@ -4,7 +4,7 @@ function sh_init() //ipsh ist ein JSON-Array mit den Shelley-IP-Adressen und der
 	//Basiswerte holen
   var	inis = new getvals();
     
-  for (let i=0;i<inis.anzshl;i++)
+  for (let i=0;i<inis.anzahl;i++)
 	{  	
 		// Setzt die CSS-Buttons entsprechend dem Status des Shelly
 		this.shsetbuttonstate(inis.baseURL,inis.ipsh.ipad[i],inis.ipsh.buttonid[i],i);
@@ -38,6 +38,13 @@ function shsetbuttonstate(baseURL,ipsh_act,buttid,idx)
  	req.send(null);
 }
 
+function shlink(num)
+{
+	  var	inis = new getvals();
+    arind=Number(num)-1;
+    url2op="http://"+inis.ipsh.ipad[arind];
+	  window.open(url2op,'_blank');
+}
 
 // Hier wird das Script auf das verwendete Netz angepasst
 function getvals()
@@ -46,9 +53,9 @@ function getvals()
   this.baseURL="https://SERVER/PATH/sh.php?";
   //Anzahl der Shelleys im Netz - noch nicht im Einsatz
   this.anzahl=3;
-  //cssid sind die IDs der DIV im index.html, ipad sind die URL-Endungen, die sich im Netz unterscheiden 
+  //cssid sind die IDs der DIV im index.html, ipad sind die URL-Endungen, die sich im Netz unterscheiden - ich habe zwei Netze 10.xx und 100.xx
   // Wenn man die ganze URL hier eingeben will, muss man im sh.php die stdURL anpassen!
-  ipdata='{"ipad":["192.168.99.99","192.168.99.100","192.168.99.105"],"genAPI":["1","1","2"], "buttonid":["Sh1","Sh2","Sh3"], "cssid":["stat1","stat2","stat3"], "cssid2":["temp1","temp2","temp3"]}';
+  ipdata='{"ipad":["192.168.23.99","192.168.23.100","192.168.23.105"],"genAPI":["1","1","2"], "buttonid":["Sh1","Sh2","Sh3"], "cssid":["stat1","stat2","stat3"], "cssid2":["temp1","temp2","temp3"]}';
   this.ipsh=JSON.parse(ipdata);
 }
 
