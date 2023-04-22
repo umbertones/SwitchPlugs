@@ -29,9 +29,12 @@ Jeder h3-Block muss kopiert werden und beim Inputtype müssen die Werte für id 
 sh.js: 
 
 In der Funktion getvals muss beim ipdata-Block für ipad jeweils die URL des Shellys angegeben werden und im Feld genAPI 1 oder 2 je nach Typ des Shellys (siehe oben bei Installation). Die weiteren Felder in ipdata zählt man einfach hoch - also z.B. stat3, stat4, Sh3, Sh4 und temp3, temp4.
-Die anzahl-Variable wird gerade noch nicht genutzt.
+Die anzahl-Variable muss noch von Hand hochgezählt werden, damit beim Laden der Seite der aktuelle Status der Shellys richtig ausgelesen wird. Das muss noch komfortabler werden
 
 sh.css: 
 
 Hier muss am Ende der Datei die beiden Blöcke erweitert werden, also z.B. an #stat1, #stat2 muss komma-getrennt #stat3 und #stat4 ergänzt werden. Und beim temp-Block genauso.
 
+# Ausblick
+- Wenn der Shelly ein Update braucht, wird das angezeigt
+- Energieauswertungen, Leistungskurven usw.
